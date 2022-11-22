@@ -21,7 +21,7 @@ class Api_pcs extends REST_Controller
         $this->load->model('M_transaksi');
         $this->load->model('M_item_transaksi');
     }
-
+    //========== cek Token ==============//
     public function cekToken()
     {
         try {
@@ -45,14 +45,19 @@ class Api_pcs extends REST_Controller
             exit();
         }
     }
+    //========== END cek Token ==============//
 
-    // API ADMIN // API ADMIN
+
+    //========= API ADMIN // API ADMIN  ========//
     public function admin_get()
-    {
+    {   // panggil data
+        // cek token
         $this->cekToken();
 
+        // panggil data admin
         $data = $this->M_admin->getData();
 
+        // menampilkan data yang telah di panggil 
         $result = array(
             "success" => true,
             "message" => "Data found",
@@ -63,13 +68,16 @@ class Api_pcs extends REST_Controller
     }
 
     public function admin_post()
-    {
-
+    {   // upload data
+        // cek token
+        // $this->cekToken();
+        // menagkap data 
         $data = array(
             'email' => $this->post('email'),
             'password' => md5($this->post('password')),
             'nama' => $this->post('nama')
         );
+        // proses input data 
         $insert = $this->M_admin->insertData($data);
 
         if ($insert) {
@@ -80,9 +88,10 @@ class Api_pcs extends REST_Controller
     }
 
     public function admin_put()
-    {
-        // $this->cekToken();
-        //validasi
+    {   //rubah data
+        // cek token
+        $this->cekToken();
+        // validasi
         $validation_message = [];
 
         if ($this->put("email") == "") {
@@ -100,7 +109,7 @@ class Api_pcs extends REST_Controller
         if ($this->put("nama") == "") {
             array_push($validation_message, "Nama tidak boleh kosong");
         }
-
+        // if no valid
         if (count($validation_message) > 0) {
             $data_json = array(
                 "success" => false,
@@ -113,7 +122,8 @@ class Api_pcs extends REST_Controller
             exit();
         }
 
-        //jika lolos validasi
+        // if valid
+        // tangkap data 
         $data = array(
             "email" => $this->put("email"),
             "password" => md5($this->put("password")),
@@ -121,13 +131,14 @@ class Api_pcs extends REST_Controller
         );
 
         $id = $this->put("id");
+        // proses rubah data 
         $result = $this->M_admin->updateAdmin($data, $id);
-
+        // if success
         $data_json = array(
             "success" => true,
             "message" => "Update Berhasil",
             "data" => array(
-                "admin" => $data
+                "admin" => $result
             )
         );
 
@@ -135,12 +146,15 @@ class Api_pcs extends REST_Controller
     }
 
     public function admin_delete()
-    {
-        // $this->cekToken();
-
+    {   // hapus data
+        // cekToken
+        $this->cekToken();
+        // tangkap id yang di terima
         $id = $this->delete("id");
+        // panggil function hapus data dengan kirin parameter id
         $result = $this->M_admin->deleteAdmin($id);
 
+        // jika tidak berhasil 
         if (empty($result)) {
             $data_json = array(
                 "success" => false,
@@ -152,7 +166,7 @@ class Api_pcs extends REST_Controller
             $this->output->_display();
             exit();
         }
-
+        // jika proses berhasil
         $data_json = array(
             "success" => true,
             "message" => "Delete Berhasil",
@@ -163,22 +177,24 @@ class Api_pcs extends REST_Controller
 
         $this->response($data_json, REST_Controller::HTTP_OK);
     }
+    //============ END API ADMIN// END API ADMIN ===========//
 
-    // END API ADMIN// END API ADMIN
 
-    // API LOGIN  // API LOGIN
+
+    //============= API LOGIN  // API LOGIN ===============//
 
     public function login_post()
-    {
-        // 
+    {   // proses login
+        // tangkap data 
         $data = array(
             "email" => $this->input->post("email"),
             "password" => md5($this->input->post("password"))
         );
-
+        // panggil function cekLoginAdmin, 
         $result = $this->M_admin->cekLoginAdmin($data);
 
         if (empty($result)) {
+            // jika no valid
             $data_json = array(
                 "success" => false,
                 "message" => "Email dan Password tidak valid",
@@ -190,6 +206,7 @@ class Api_pcs extends REST_Controller
             $this->output->_display();
             exit();
         } else {
+            // jika valid, create token
             $date = new Datetime();
 
             $payload["id"] = $result["id"];
@@ -209,17 +226,18 @@ class Api_pcs extends REST_Controller
             $this->response($data_json, REST_Controller::HTTP_OK);
         }
     }
-    // END API LOGIN// END API LOGIN
+
+    //=========== END API LOGIN// END API LOGIN =============//
 
 
 
-    // API END produk  // API END produk
+    //=============== API produk  // API produk ============//
     public function produk_get()
     {
         $this->cekToken();
-
+        // panggil data produk 
         $result = $this->M_produk->getProduk();
-
+        // tampilkan data 
         $data_json = array(
             "success" => true,
             "message" => "Data found",
@@ -232,9 +250,10 @@ class Api_pcs extends REST_Controller
     }
 
     public function produk_post()
-    {
+    {   // upload produk
+        // cek token
         $this->cekToken();
-
+        // validasi
         $validation_message = [];
 
         if ($this->post("admin_id") == "") {
@@ -243,11 +262,9 @@ class Api_pcs extends REST_Controller
         if ($this->post("admin_id") == "" && !$this->M_admin->cekAdminExist($this->input->post("admin_id"))) {
             array_push($validation_message, "Admin ID tidak ditemukan");
         }
-
         if ($this->post("nama") == "") {
             array_push($validation_message, "Nama tidak boleh kosong");
         }
-
         if ($this->post("harga") == "") {
             array_push($validation_message, "Harga tidak boleh kosong");
         }
@@ -260,7 +277,7 @@ class Api_pcs extends REST_Controller
         if ($this->post("stok") == "" && !is_numeric($this->input->post("stok"))) {
             array_push($validation_message, "Stok harus di isi angka");
         }
-
+        // if no valid
         if (count($validation_message) > 0) {
             $data_json = array(
                 "success" => false,
@@ -272,15 +289,17 @@ class Api_pcs extends REST_Controller
             $this->output->_display();
             exit();
         }
-        //jika lolos validasi
+        //if lolos validasi
+        //tangkap data 
         $data = array(
             'admin_id' => $this->input->post('admin_id'),
             'nama' => $this->input->post('nama'),
             'harga' => $this->input->post('harga'),
             'stok' => $this->input->post('stok')
         );
+        // proses insert data
         $result = $this->M_produk->insertProduk($data);
-
+        // tampilkan data 
         $data_json = array(
             "success" => true,
             "message" => "insert Berhasil",
@@ -292,37 +311,34 @@ class Api_pcs extends REST_Controller
     }
 
     public function produk_put()
-    {
+    {   //edit produk
+        //cek token
         $this->cekToken();
         //validasi
-
         $validation_message = [];
 
         if ($this->put("id") == "") {
             array_push($validation_message, "ID tidak boleh kosong");
         }
-
         if ($this->put("admin_id") == "") {
             array_push($validation_message, "Admin ID tidak boleh kosong");
         }
-
         if ($this->put("nama") == "") {
             array_push($validation_message, "Nama tidak boleh kosong");
         }
-
         if ($this->put("harga") == "") {
             array_push($validation_message, "Harga tidak boleh kosong");
         }
-        if ($this->post("harga") == "" && !is_numeric($this->input->post("harga"))) {
+        if ($this->put("harga") == "" && !is_numeric($this->put("harga"))) {
             array_push($validation_message, "Harga harus di isi angka");
         }
         if ($this->put("stok") == "") {
             array_push($validation_message, "Stok tidak boleh kosong");
         }
-        if ($this->post("stok") == "" && !is_numeric($this->input->post("stok"))) {
+        if ($this->put("stok") == "" && !is_numeric($this->put("stok"))) {
             array_push($validation_message, "stok harus di isi angka");
         }
-
+        //if not valid
         if (count($validation_message) > 0) {
             $data_json = array(
                 "success" => false,
@@ -334,7 +350,7 @@ class Api_pcs extends REST_Controller
             $this->output->_display();
             exit();
         }
-        //jika lolos validasi
+        //if validasi, tangkap data 
         $data = array(
             'admin_id' => $this->put('admin_id'),
             'nama' => $this->put('nama'),
@@ -343,8 +359,9 @@ class Api_pcs extends REST_Controller
         );
 
         $id = $this->put("id");
+        //proses ubah data 
         $result = $this->M_produk->updateProduk($data, $id);
-
+        //if success, tampilkan  
         $data_json = array(
             "success" => true,
             "message" => "Update Berhasil",
@@ -357,12 +374,14 @@ class Api_pcs extends REST_Controller
     }
 
     public function produk_delete()
-    {
+    {   //delete
+        //cek token 
         $this->cekToken();
-
+        //tangkap id
         $id = $this->delete("id");
+        // function proses delete
         $result = $this->M_produk->deleteProduk($id);
-
+        // if id not valid
         if (empty($result)) {
             $data_json = array(
                 "success" => false,
@@ -374,7 +393,7 @@ class Api_pcs extends REST_Controller
             $this->output->_display();
             exit();
         }
-
+        //if proses success
         $data_json = array(
             "success" => true,
             "message" => "Delete Berhasil",
@@ -386,17 +405,18 @@ class Api_pcs extends REST_Controller
         $this->response($data_json, REST_Controller::HTTP_OK);
     }
 
-    // API END produk  // API END produk
+    //========= API END produk  // API END produk =============//
 
 
 
-    // API transaksi // API transaksi
+    //============ API transaksi // API transaksi =============//
     public function transaksi_get()
-    {
+    {   //panggil data
+        //cek token
         $this->cekToken();
-
+        //function proses panggil data
         $data = $this->M_transaksi->gettransaksi();
-
+        //if data ada, tampilkan 
         $data_json = array(
             "success" => true,
             "message" => "Data found",
@@ -407,11 +427,12 @@ class Api_pcs extends REST_Controller
     }
 
     public function transaksi_bulan_ini_get()
-    {
+    {   //panggil data selama satu bulan terakhir 
+        //cek token
         $this->cekToken();
-
+        //function proses panggil data
         $data = $this->M_transaksi->gettransaksibulanini();
-
+        //tampil data 
         $data_json = array(
             "success" => true,
             "message" => "Data found",
@@ -422,9 +443,10 @@ class Api_pcs extends REST_Controller
     }
 
     public function transaksi_post()
-    {
+    {   //up data
+        //cek token
         $this->cekToken();
-
+        //validasi
         $validation_message = [];
 
         if ($this->input->post("admin_id") == "") {
@@ -439,7 +461,7 @@ class Api_pcs extends REST_Controller
         if ($this->input->post("total") == "" && !is_numeric($this->input->post("total"))) {
             array_push($validation_message, "total harus di isi angka");
         }
-
+        //show if not valid
         if (count($validation_message) > 0) {
             $data_json = array(
                 "success" => false,
@@ -451,15 +473,16 @@ class Api_pcs extends REST_Controller
             $this->output->_display();
             exit();
         }
-        //jika lolos validasi
+        //tangkap data 
         $data = array(
             'admin_id' => $this->input->post('admin_id'),
             'total' => $this->input->post('total'),
             'tanggal' => date("Y-m-d H:i:s")
         );
+        //proses insert data transaksi
         $result = $this->M_transaksi->inserttransaksi($data);
 
-
+        //show if data valid
         $data_json = array(
             "success" => true,
             "message" => "Insert Berhasil",
@@ -472,7 +495,8 @@ class Api_pcs extends REST_Controller
     }
 
     public function transaksi_put()
-    {
+    {   //edit transaksi
+        //cektoken
         $this->cekToken();
         //validasi
         $validation_message = [];
@@ -491,7 +515,7 @@ class Api_pcs extends REST_Controller
         if ($this->put("total") == "" && !is_numeric($this->put("total"))) {
             array_push($validation_message, "total harus di isi angka");
         }
-
+        //show if data not valid
         if (count($validation_message) > 0) {
             $data_json = array(
                 "success" => false,
@@ -505,15 +529,17 @@ class Api_pcs extends REST_Controller
         }
 
         //jika lolos validasi
+        //tangkap data
         $data = array(
             'admin_id' => $this->put("admin_id"),
             'total' => $this->put("total"),
             'tanggal' => date("Y-m-d H:i:s")
         );
 
+        //function proses update data
         $id = $this->put("id");
         $result = $this->M_transaksi->updatetransaksi($data, $id);
-
+        //show data if valid
         $data_json = array(
             "success" => true,
             "message" => "Update Berhasil",
@@ -526,12 +552,14 @@ class Api_pcs extends REST_Controller
     }
 
     public function transaksi_delete()
-    {
-        // $this->cekToken();
-
+    {   //delete transaksi
+        //cekToken
+        $this->cekToken();
+        //tangkap data id
         $id = $this->delete("id");
+        //function proses delete
         $result = $this->M_transaksi->deletetransaksi($id);
-
+        //show if not valid
         if (empty($result)) {
             $data_json = array(
                 "success" => false,
@@ -543,7 +571,7 @@ class Api_pcs extends REST_Controller
             $this->output->_display();
             exit();
         }
-
+        //show if valid
         $data_json = array(
             "success" => true,
             "message" => "Delete Berhasil",
@@ -554,16 +582,18 @@ class Api_pcs extends REST_Controller
 
         $this->response($data_json, REST_Controller::HTTP_OK);
     }
-    // API END transaksi // API END transaksi
+    //======== API END transaksi // API END transaksi ==========//
 
 
 
-    // API item_transaksi // API item_transaksi
+    //======== API item_transaksi // API item_transaksi =========//
     public function item_transaksi_get()
-    {
+    {   //show data
+        //cek token
         $this->cekToken();
-
+        //function ambil data 
         $result = $this->M_item_transaksi->getitemtransaksi();
+        //show if found
         $data_json = array(
             "success" => true,
             "message" => "Data found",
@@ -576,11 +606,12 @@ class Api_pcs extends REST_Controller
     }
 
     public function item_transaksi_by_transaksi_id_get()
-    {
+    {   //show data
+        //cek token
         $this->cekToken();
-
+        //function ambil data whare tansaksi id
         $result = $this->M_item_transaksi->getitemtransaksibytransaksiID($this->input->get('transaksi_id'));
-
+        //show if found
         $data_json = array(
             "success" => true,
             "message" => "Data found",
@@ -593,9 +624,10 @@ class Api_pcs extends REST_Controller
     }
 
     public function item_transaksi_post()
-    {
+    {   //up data 
+        //cek token
         $this->cekToken();
-
+        //validation
         $validation_message = [];
 
         if ($this->input->post("transaksi_id") == "") {
@@ -622,7 +654,7 @@ class Api_pcs extends REST_Controller
         if ($this->input->post("harga_saat_transaksi") == "" && !is_numeric($this->input->post("harga_saat_transaksi"))) {
             array_push($validation_message, "harga_saat_transaksi harus di isi angka");
         }
-
+        //show if not valid
         if (count($validation_message) > 0) {
             $data_json = array(
                 "success" => false,
@@ -635,6 +667,7 @@ class Api_pcs extends REST_Controller
             exit();
         }
         //jika lolos validasi
+        //tangkap data
         $data = array(
             'transaksi_id' => $this->input->post('transaksi_id'),
             'produk_id' => $this->input->post('produk_id'),
@@ -642,9 +675,10 @@ class Api_pcs extends REST_Controller
             'harga_saat_transaksi' => $this->input->post('harga_saat_transaksi'),
             'sub_total' => $this->input->post('qty') * $this->input->post('harga_saat_transaksi')
         );
+        //function proses input data
         $result = $this->M_item_transaksi->insertitemtransaksi($data);
 
-
+        //show if success
         $data_json = array(
             "success" => true,
             "message" => "Insert Berhasil",
@@ -657,7 +691,8 @@ class Api_pcs extends REST_Controller
     }
 
     public function item_transaksi_put()
-    {
+    {   //edit data
+        //cektoken
         $this->cekToken();
         //validasi
         $validation_message = [];
@@ -689,7 +724,7 @@ class Api_pcs extends REST_Controller
         if ($this->put("harga_saat_transaksi") == "" && !is_numeric($this->put("harga_saat_transaksi"))) {
             array_push($validation_message, "harga_saat_transaksi harus di isi angka");
         }
-
+        //show if not valid
         if (count($validation_message) > 0) {
             $data_json = array(
                 "success" => false,
@@ -703,6 +738,7 @@ class Api_pcs extends REST_Controller
         }
 
         //jika lolos validasi
+        //tangkap data
         $data = array(
             'transaksi_id' => $this->put('transaksi_id'),
             'produk_id' => $this->put('produk_id'),
@@ -711,9 +747,10 @@ class Api_pcs extends REST_Controller
             'sub_total' => $this->put('qty') * $this->put('harga_saat_transaksi')
         );
 
+        //function proses update data
         $id = $this->put("id");
         $result = $this->M_item_transaksi->updateitem_transaksi($data, $id);
-
+        //show if success
         $data_json = array(
             "success" => true,
             "message" => "Update Berhasil",
@@ -726,12 +763,14 @@ class Api_pcs extends REST_Controller
     }
 
     public function item_transaksi_delete()
-    {
+    { //edit data
+        //cektoken
         $this->cekToken();
-
+        //tangkap data id
         $id = $this->delete("id");
+        //function proses delete
         $result = $this->M_item_transaksi->deleteitem_transaksi($id);
-
+        //if id not valid
         if (empty($result)) {
             $data_json = array(
                 "success" => false,
@@ -743,7 +782,7 @@ class Api_pcs extends REST_Controller
             $this->output->_display();
             exit();
         }
-
+        //show, if success
         $data_json = array(
             "success" => true,
             "message" => "Delete Berhasil",
@@ -756,12 +795,14 @@ class Api_pcs extends REST_Controller
     }
 
     public function item_transaksi_by_transaksi_id_delete()
-    {
+    {   //delete data
+        //cektoken
         $this->cekToken();
-
+        //tangkap data
         $transaksi_id = $this->delete("transaksi_id");
+        //function delete data where transaksi_id
         $result = $this->M_item_transaksi->deleteitem_transaksibytransaksiID($transaksi_id);
-
+        //show if not valid
         if (empty($result)) {
             $data_json = array(
                 "success" => false,
@@ -773,7 +814,7 @@ class Api_pcs extends REST_Controller
             $this->output->_display();
             exit();
         }
-
+        //show if success
         $data_json = array(
             "success" => true,
             "message" => "Delete Berhasil",
@@ -784,4 +825,5 @@ class Api_pcs extends REST_Controller
 
         $this->response($data_json, REST_Controller::HTTP_OK);
     }
+    //===== API end item_transaksi // API end item_transaksi =======//
 }

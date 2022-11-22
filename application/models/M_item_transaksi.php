@@ -14,7 +14,7 @@ class M_item_transaksi extends CI_Model
 
     public function getitemtransaksi()
     {
-        $this->db->select('item_transaksi.id,item_transaksi.transaksi_id,item_transaksi.produk_id,produk.nama,item_transaksi.qty,item_transaksi.harga_saat_transaksi,item_transaksi.sub_total');
+        $this->db->select('item_transaksi.id, item_transaksi.transaksi_id,item_transaksi.produk_id, produk.nama, item_transaksi.qty, item_transaksi.harga_saat_transaksi, item_transaksi.sub_total');
         $this->db->from('item_transaksi');
         $this->db->join('produk', 'produk.id = item_transaksi.produk_id');
         $query = $this->db->get();
@@ -23,7 +23,7 @@ class M_item_transaksi extends CI_Model
 
     public function getitemtransaksibytransaksiID($transaksi_id)
     {
-        $this->db->select('item_transaksi.id,item_transaksi.transaksi_id,item_transaksi.produk_id,produk.nama,item_transaksi.qty,item_transaksi.harga_saat_transaksi,item_transaksi.sub_total');
+        $this->db->select('item_transaksi.id, item_transaksi.transaksi_id, item_transaksi.produk_id, produk.nama, item_transaksi.qty, item_transaksi.harga_saat_transaksi, item_transaksi.sub_total');
         $this->db->from('item_transaksi');
         $this->db->join('produk', 'produk.id = item_transaksi.produk_id');
         $this->db->where('item_transaksi.transaksi_id', $transaksi_id);
@@ -75,35 +75,49 @@ class M_item_transaksi extends CI_Model
 
     public function deleteitem_transaksibytransaksiID($transaksi_id)
     {
-        $result = $this->db->get_where('item_transaksi', array('id' => $transaksi_id));
+        $result = $this->db->get_where('item_transaksi', array('transaksi_id' => $transaksi_id));
 
         $this->db->where('transaksi_id', $transaksi_id);
         $this->db->delete('item_transaksi');
 
         return $result->result_array();
     }
-
-    public function cekLoginitem_transaksi($data)
-    {
-        $this->db->where($data);
-        $result = $this->db->get('item_transaksi');
-
-        return $result->row_array();
-    }
-
-    public function cekitem_transaksiExist($id)
-    {
-        $data = array(
-            "id" => $id
-        );
-
-        $this->db->where($data);
-        $result = $this->db->get('item_transaksi');
-
-        if (empty($result->row_array())) {
-            return false;
-        }
-
-        return true;
-    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // public function cekLoginitem_transaksi($data)
+    // {
+    //     $this->db->where($data);
+    //     $result = $this->db->get('item_transaksi');
+
+    //     return $result->row_array();
+    // }
+
+    // public function cekitem_transaksiExist($id)
+    // {
+    //     $data = array(
+    //         "id" => $id
+    //     );
+
+    //     $this->db->where($data);
+    //     $result = $this->db->get('item_transaksi');
+
+    //     if (empty($result->row_array())) {
+    //         return false;
+    //     }
+
+    //     return true;
+    // }
