@@ -1,0 +1,1107 @@
+{
+	"version": 1,
+	"collections": [
+		{
+			"id": "0611829c-dc16-4f18-b050-0c9269158f1b",
+			"uid": "0-0611829c-dc16-4f18-b050-0c9269158f1b",
+			"name": "produk",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"variables": [],
+			"order": [
+				"2bc80941-d022-47cc-acc6-d32e31406039",
+				"9e178fe4-ad67-4b02-9e4f-054a4c90cc1e",
+				"28894e07-fe4d-4ba4-a828-4d7ba32bc2f6",
+				"3392c353-2a82-4680-bfa4-e11d1972b311"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {},
+			"createdAt": "2022-11-19T07:59:59.887Z",
+			"folders": [],
+			"requests": [
+				{
+					"id": "28894e07-fe4d-4ba4-a828-4d7ba32bc2f6",
+					"uid": "0-28894e07-fe4d-4ba4-a828-4d7ba32bc2f6",
+					"name": "produk",
+					"url": "http://localhost:8080/1690/Api_pcs/produk",
+					"description": null,
+					"data": [
+						{
+							"key": "id",
+							"value": "28",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "admin_id",
+							"value": "60",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "nama",
+							"value": "Mouse Logitech",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "harga",
+							"value": "100000",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "stok",
+							"value": "8",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "PUT",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+					},
+					"collectionId": "0611829c-dc16-4f18-b050-0c9269158f1b",
+					"pathVariables": {}
+				},
+				{
+					"id": "2bc80941-d022-47cc-acc6-d32e31406039",
+					"uid": "0-2bc80941-d022-47cc-acc6-d32e31406039",
+					"name": "produk",
+					"url": "http://localhost:8080/1690/Api_pcs/produk",
+					"description": "",
+					"data": [],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+					},
+					"collectionId": "0611829c-dc16-4f18-b050-0c9269158f1b",
+					"pathVariables": {}
+				},
+				{
+					"id": "3392c353-2a82-4680-bfa4-e11d1972b311",
+					"uid": "0-3392c353-2a82-4680-bfa4-e11d1972b311",
+					"name": "produk",
+					"url": "http://localhost:8080/1690/Api_pcs/produk",
+					"description": null,
+					"data": [
+						{
+							"key": "id",
+							"value": "28",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "DELETE",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+					},
+					"collectionId": "0611829c-dc16-4f18-b050-0c9269158f1b",
+					"pathVariables": {}
+				},
+				{
+					"id": "9e178fe4-ad67-4b02-9e4f-054a4c90cc1e",
+					"uid": "0-9e178fe4-ad67-4b02-9e4f-054a4c90cc1e",
+					"name": "produk",
+					"url": "http://localhost:8080/1690/Api_pcs/produk",
+					"description": null,
+					"data": [
+						{
+							"key": "admin_id",
+							"value": "44",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "nama",
+							"value": "Mie Ayam Bakso",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "harga",
+							"value": "10000",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "stok",
+							"value": "23",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+					},
+					"collectionId": "0611829c-dc16-4f18-b050-0c9269158f1b",
+					"pathVariables": {}
+				}
+			]
+		},
+		{
+			"id": "685b5b3d-10d1-40dd-bc2a-cc8a0c7acf9e",
+			"uid": "0-685b5b3d-10d1-40dd-bc2a-cc8a0c7acf9e",
+			"name": "admin",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"variables": [],
+			"order": [
+				"995e58fd-7b66-4142-80b6-f6d188a1f5d1",
+				"3bb97c20-9b32-48f6-87cf-4d07d51fe89e",
+				"16d0ef71-eabb-4671-9a8f-4471f712c9fd",
+				"858c92d5-eb4d-4bfa-920b-255f802cba7b"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {},
+			"createdAt": "2022-11-19T06:07:07.142Z",
+			"folders": [],
+			"requests": [
+				{
+					"id": "16d0ef71-eabb-4671-9a8f-4471f712c9fd",
+					"uid": "0-16d0ef71-eabb-4671-9a8f-4471f712c9fd",
+					"name": "admin",
+					"url": "http://localhost:8080/1690/Api_pcs/admin",
+					"description": null,
+					"data": [
+						{
+							"key": "email",
+							"value": "xyz55@amikom.ac.id",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "nama",
+							"value": "Dodi",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "id",
+							"value": "64",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "PUT",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "email",
+							"value": "sss@gmail.com",
+							"equals": true,
+							"description": "",
+							"enabled": false
+						},
+						{
+							"key": "password",
+							"value": "11111",
+							"equals": true,
+							"description": "",
+							"enabled": false
+						},
+						{
+							"key": "nama",
+							"value": "adadawg",
+							"equals": true,
+							"description": "",
+							"enabled": false
+						},
+						{
+							"key": "id",
+							"value": "60",
+							"equals": true,
+							"description": "",
+							"enabled": false
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+					},
+					"collectionId": "685b5b3d-10d1-40dd-bc2a-cc8a0c7acf9e",
+					"pathVariables": {}
+				},
+				{
+					"id": "3bb97c20-9b32-48f6-87cf-4d07d51fe89e",
+					"uid": "0-3bb97c20-9b32-48f6-87cf-4d07d51fe89e",
+					"name": "admin",
+					"url": "http://localhost:8080/1690/Api_pcs/admin",
+					"description": null,
+					"data": [
+						{
+							"key": "email",
+							"value": "xyz5@amikom.ac.id",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "nama",
+							"value": "XYZ",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+					},
+					"collectionId": "685b5b3d-10d1-40dd-bc2a-cc8a0c7acf9e",
+					"pathVariables": {}
+				},
+				{
+					"id": "858c92d5-eb4d-4bfa-920b-255f802cba7b",
+					"uid": "0-858c92d5-eb4d-4bfa-920b-255f802cba7b",
+					"name": "admin",
+					"url": "http://localhost:8080/1690/Api_pcs/admin",
+					"description": null,
+					"data": [
+						{
+							"key": "id",
+							"value": "64",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "DELETE",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+					},
+					"collectionId": "685b5b3d-10d1-40dd-bc2a-cc8a0c7acf9e",
+					"pathVariables": {}
+				},
+				{
+					"id": "995e58fd-7b66-4142-80b6-f6d188a1f5d1",
+					"uid": "0-995e58fd-7b66-4142-80b6-f6d188a1f5d1",
+					"name": "admin",
+					"url": "http://localhost:8080/1690/Api_pcs/admin",
+					"description": "",
+					"data": [],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+					},
+					"collectionId": "685b5b3d-10d1-40dd-bc2a-cc8a0c7acf9e",
+					"pathVariables": {}
+				}
+			]
+		},
+		{
+			"id": "7be28f20-6e39-43c3-8f77-de48f0ae3b9e",
+			"uid": "0-7be28f20-6e39-43c3-8f77-de48f0ae3b9e",
+			"name": "login",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"variables": [],
+			"order": [
+				"9ba648d2-bae2-42b9-b65e-a5f955fb45b5"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {},
+			"createdAt": "2022-11-19T06:37:02.308Z",
+			"folders": [],
+			"requests": [
+				{
+					"id": "9ba648d2-bae2-42b9-b65e-a5f955fb45b5",
+					"uid": "0-9ba648d2-bae2-42b9-b65e-a5f955fb45b5",
+					"name": "login_admin",
+					"url": "http://localhost:8080/1690/Api_pcs/login",
+					"description": null,
+					"data": [
+						{
+							"key": "email",
+							"value": "dondon@amikom.ac.id",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+					},
+					"collectionId": "7be28f20-6e39-43c3-8f77-de48f0ae3b9e",
+					"pathVariables": {}
+				}
+			]
+		},
+		{
+			"id": "bf541ca8-a91f-45d0-b99d-af3870533ef7",
+			"uid": "0-bf541ca8-a91f-45d0-b99d-af3870533ef7",
+			"name": "item_transaksi",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"variables": [],
+			"order": [
+				"366e94dc-ea61-4751-887e-51cd0cdc28f9",
+				"2eb6292a-29a4-44de-bc3b-7ec8f532e437",
+				"274eb8f7-719a-4ead-b31f-c154e6c9968d",
+				"db56ec6f-d5c0-4208-ad61-36b1505ce1d4",
+				"6e0d15e7-1619-480e-8c9b-c6af462b0fc8",
+				"a0a06b0e-5c51-45c9-8a54-7e9fb8cb0adc"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {},
+			"createdAt": "2022-11-19T07:57:46.520Z",
+			"folders": [],
+			"requests": [
+				{
+					"id": "274eb8f7-719a-4ead-b31f-c154e6c9968d",
+					"uid": "0-274eb8f7-719a-4ead-b31f-c154e6c9968d",
+					"name": "item_transaksi",
+					"url": "http://localhost:8080/1690/Api_pcs/item_transaksi",
+					"description": null,
+					"data": [
+						{
+							"key": "transaksi_id",
+							"value": "26",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "produk_id",
+							"value": "25",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "qty",
+							"value": "6",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "harga_saat_transaksi",
+							"value": "60000",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "id",
+							"value": "35",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "PUT",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+					},
+					"collectionId": "bf541ca8-a91f-45d0-b99d-af3870533ef7",
+					"pathVariables": {}
+				},
+				{
+					"id": "2eb6292a-29a4-44de-bc3b-7ec8f532e437",
+					"uid": "0-2eb6292a-29a4-44de-bc3b-7ec8f532e437",
+					"name": "item_transaksi",
+					"url": "http://localhost:8080/1690/Api_pcs/item_transaksi",
+					"description": null,
+					"data": [
+						{
+							"key": "transaksi_id",
+							"value": "26",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "produk_id",
+							"value": "25",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "qty",
+							"value": "3",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "harga_saat_transaksi",
+							"value": "30000",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+					},
+					"collectionId": "bf541ca8-a91f-45d0-b99d-af3870533ef7",
+					"pathVariables": {}
+				},
+				{
+					"id": "366e94dc-ea61-4751-887e-51cd0cdc28f9",
+					"uid": "0-366e94dc-ea61-4751-887e-51cd0cdc28f9",
+					"name": "item_transaksi",
+					"url": "http://localhost:8080/1690/Api_pcs/item_transaksi",
+					"description": "",
+					"data": [],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+					},
+					"collectionId": "bf541ca8-a91f-45d0-b99d-af3870533ef7",
+					"pathVariables": {}
+				},
+				{
+					"id": "6e0d15e7-1619-480e-8c9b-c6af462b0fc8",
+					"uid": "0-6e0d15e7-1619-480e-8c9b-c6af462b0fc8",
+					"name": "item_transaksi_by_transaksi_id",
+					"url": "http://localhost:8080/1690/Api_pcs/item_transaksi_by_transaksi_id",
+					"description": null,
+					"data": [
+						{
+							"key": "transaksi_id",
+							"value": "9",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "DELETE",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+					},
+					"collectionId": "bf541ca8-a91f-45d0-b99d-af3870533ef7",
+					"pathVariables": {}
+				},
+				{
+					"id": "a0a06b0e-5c51-45c9-8a54-7e9fb8cb0adc",
+					"uid": "0-a0a06b0e-5c51-45c9-8a54-7e9fb8cb0adc",
+					"name": "item_transaksi_by_transaksi_id",
+					"url": "http://localhost:8080/1690/Api_pcs/item_transaksi_by_transaksi_id?transaksi_id=10",
+					"description": "",
+					"data": [],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "transaksi_id",
+							"value": "10",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+					},
+					"collectionId": "bf541ca8-a91f-45d0-b99d-af3870533ef7",
+					"pathVariables": {}
+				},
+				{
+					"id": "db56ec6f-d5c0-4208-ad61-36b1505ce1d4",
+					"uid": "0-db56ec6f-d5c0-4208-ad61-36b1505ce1d4",
+					"name": "item_transaksi",
+					"url": "http://localhost:8080/1690/Api_pcs/item_transaksi",
+					"description": null,
+					"data": [
+						{
+							"key": "id",
+							"value": "13",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "DELETE",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+					},
+					"collectionId": "bf541ca8-a91f-45d0-b99d-af3870533ef7",
+					"pathVariables": {}
+				}
+			]
+		},
+		{
+			"id": "e7bbfb78-6e45-49fa-961c-8371f9147c3e",
+			"uid": "0-e7bbfb78-6e45-49fa-961c-8371f9147c3e",
+			"name": "transaksi",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"variables": [],
+			"order": [
+				"a0b917ff-0fc3-4a19-8e86-06c2b312fc90",
+				"c66035f0-f820-42b8-9f73-f16c12bbd354",
+				"69b48193-e3bf-4261-ad81-df24a8d219a7",
+				"3895a153-0b7d-409a-ae5c-2244419a4a00",
+				"7fcf5d54-99f7-4f37-aaf6-2be4059c2b1e"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {},
+			"createdAt": "2022-11-19T07:59:54.974Z",
+			"folders": [],
+			"requests": [
+				{
+					"id": "3895a153-0b7d-409a-ae5c-2244419a4a00",
+					"uid": "0-3895a153-0b7d-409a-ae5c-2244419a4a00",
+					"name": "transaksi",
+					"url": "http://localhost:8080/1690/Api_pcs/transaksi",
+					"description": null,
+					"data": [
+						{
+							"key": "id",
+							"value": "28",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "DELETE",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+					},
+					"collectionId": "e7bbfb78-6e45-49fa-961c-8371f9147c3e",
+					"pathVariables": {}
+				},
+				{
+					"id": "69b48193-e3bf-4261-ad81-df24a8d219a7",
+					"uid": "0-69b48193-e3bf-4261-ad81-df24a8d219a7",
+					"name": "transaksi",
+					"url": "http://localhost:8080/1690/Api_pcs/transaksi",
+					"description": null,
+					"data": [
+						{
+							"key": "admin_id",
+							"value": "43",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "total",
+							"value": "500000",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "id",
+							"value": "28",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "PUT",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+					},
+					"collectionId": "e7bbfb78-6e45-49fa-961c-8371f9147c3e",
+					"pathVariables": {}
+				},
+				{
+					"id": "7fcf5d54-99f7-4f37-aaf6-2be4059c2b1e",
+					"uid": "0-7fcf5d54-99f7-4f37-aaf6-2be4059c2b1e",
+					"name": "transaksi_bulan_ini",
+					"url": "http://localhost:8080/1690/Api_pcs/transaksi_bulan_ini",
+					"description": "",
+					"data": [],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+					},
+					"collectionId": "e7bbfb78-6e45-49fa-961c-8371f9147c3e",
+					"pathVariables": {}
+				},
+				{
+					"id": "a0b917ff-0fc3-4a19-8e86-06c2b312fc90",
+					"uid": "0-a0b917ff-0fc3-4a19-8e86-06c2b312fc90",
+					"name": "transaksi",
+					"url": "http://localhost:8080/1690/Api_pcs/transaksi",
+					"description": "",
+					"data": [],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+					},
+					"collectionId": "e7bbfb78-6e45-49fa-961c-8371f9147c3e",
+					"pathVariables": {}
+				},
+				{
+					"id": "c66035f0-f820-42b8-9f73-f16c12bbd354",
+					"uid": "0-c66035f0-f820-42b8-9f73-f16c12bbd354",
+					"name": "transaksi",
+					"url": "http://localhost:8080/1690/Api_pcs/transaksi",
+					"description": null,
+					"data": [
+						{
+							"key": "admin_id",
+							"value": "43",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "total",
+							"value": "200000",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQzIiwiZW1haWwiOiJkb25kb25AYW1pa29tLmFjLmlkIiwiaWF0IjoxNjY5MDc0NDkwLCJleHAiOjE2NjkwNzgwOTB9.vNU6Rd6mX9yxl3BRL5qLfy1RN-jEqZmqw_9IjM9V7Ec"
+					},
+					"collectionId": "e7bbfb78-6e45-49fa-961c-8371f9147c3e",
+					"pathVariables": {}
+				}
+			]
+		}
+	],
+	"environments": [
+		{
+			"id": "2eb65b37-783d-496e-90f5-8f7c086ab366",
+			"name": "My Workspace - globals",
+			"values": []
+		}
+	],
+	"headerPresets": [],
+	"globals": []
+}
